@@ -29,3 +29,12 @@ Incluye lo siguiente:
 * La función ***iluminarColor*** toma el color que se retorna desde el array y lo transforma agregando la clase *light* mediante el método `classList.add`. De igual forma en un tiempo de 350 milisegundos invoca la función *apagarColor*.
 * La función ***apagarColor*** retorna el color a su estado original invocando el método `classList.remove` que remueve la clase *light* previamente agregada a la lista de clases del color seleccionado.
 * La función ***siguienteNivel*** hace un llamado a la función *iluminarSecuencia*.
+--------------------------
+## Versión 1.0.3
+### Obteniendo el input del usuario.
+Para obtener el input del usuario se agrega un manejador para el evento click del mouse usando `addEventListener` para cada uno de los colores del juego. Utilizando la propiedad *target* devuelta por el evento **click** se puede identificar cuál es el botón que ha sido presionado.
+
+Incluye lo siguiente:
+* Creación de los métodos *agregarEventosClick* y *elegirColor* en la clase ***Juego***.
+* La función ***agregarEventosClick*** permite obtener el input del usuario, con un método para "escuchar eventos" que llama a un método de forma asíncrona. Haciendo esto se pierde el contexto, así que hay que especificar en la llamada al método en contexto de quien es **this** con `.bind(this)` para que tome como referencia a la instancia y no al botón.
+* La función ***elegirColor*** permite obtener el color que ha elegido el usuario.
