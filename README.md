@@ -50,3 +50,13 @@ Incluye lo siguiente:
 * La función ***eliminarEventosClick*** se utiliza dentro del proceso de reiniciar nuevamente la secuencia cuando el usuario ha pasado al siguiente nivel.
 * La función ***transformarColorANumero*** mediante un bloque `switch` y de acuerdo al nombre del color retorna el número correspondiente al color, que es el que se va a evaluar contra la secuencia generada.
 * En la función ***elegirColor*** se detalla el proceso de los colores que selecciona el usuario de acuerdo a la secuencia. Si la selección va coincidiendo con la secuencia generada, el usuario va subiendo de nivel en el juego.
+--------------------------
+## Versión 1.0.5
+### Agregando los estados finales del juego.
+Se incluye una librería de mensajes con estilos mucho más agradables que el mensaje básico de javascript para mostrar los estados finales del juego al usuario.
+
+Incluye lo siguiente:
+* Se incluye la librería ***SweetAlert*** mediante la cual se mejora la presentación de los mensajes que se muestran al usuario cuando gana o pierde el juego.
+* En la función *inicializar* se incluye el llamado a la función ***toggleBtnEmpezar*** que se encarga de controlar que se muestre el botón para iniciar un nuevo juego.
+* Se crean las función ***ganoElJuego*** en la cual se muestra al usuario el mensaje que indica que ha ganado el juego y vuelve a iniciar el juego una vez se cierra el mensaje mostrado. 
+* Se crean las función ***perdioElJuego*** en la cual se muestra al usuario el mensaje que indica que ha perdido el juego, elimina los eventos del click y vuelve a iniciar el juego una vez se cierra el mensaje mostrado. 
