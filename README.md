@@ -38,3 +38,15 @@ Incluye lo siguiente:
 * Creación de los métodos *agregarEventosClick* y *elegirColor* en la clase ***Juego***.
 * La función ***agregarEventosClick*** permite obtener el input del usuario, con un método para "escuchar eventos" que llama a un método de forma asíncrona. Haciendo esto se pierde el contexto, así que hay que especificar en la llamada al método en contexto de quien es **this** con `.bind(this)` para que tome como referencia a la instancia y no al botón.
 * La función ***elegirColor*** permite obtener el color que ha elegido el usuario.
+--------------------------
+## Versión 1.0.4
+### Agregando la verificación del color elegido.
+Para agregar atributos al objeto principal en el que está el código, basta con usar this haciendo referencia al contexto de la clase, y agregar los atributos con un punto. Ej: `this.atributo = valor`.
+
+La verificación del color elegido se hará creando y removiendo los eventos del click al pasar el juego a cada nuevo nivel.
+
+Incluye lo siguiente:
+* Creación de los métodos *eliminarEventosClick* y *transformarColorANumero* en la clase ***Juego***. Se complementó el método *elegirColor*.
+* La función ***eliminarEventosClick*** se utiliza dentro del proceso de reiniciar nuevamente la secuencia cuando el usuario ha pasado al siguiente nivel.
+* La función ***transformarColorANumero*** mediante un bloque `switch` y de acuerdo al nombre del color retorna el número correspondiente al color, que es el que se va a evaluar contra la secuencia generada.
+* En la función ***elegirColor*** se detalla el proceso de los colores que selecciona el usuario de acuerdo a la secuencia. Si la selección va coincidiendo con la secuencia generada, el usuario va subiendo de nivel en el juego.
